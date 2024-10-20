@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Weather App</h2>
+        <ul>
+            <li><a href="Index.html">Dashboard</a></li> 
+            <li><a href="App2.html">Tables</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <!-- Top bar with search and profile -->
+        <div class="top-bar">
+            <input type="text" id="cityInput" class="search-bar" placeholder="Search for weather...">
+            <button id="getWeatherBtn">Get Weather</button>
+            <div class="user-profile">User</div>
+        </div>
+
+        <!-- Weather data display section -->
+        <div id="weatherData" class="weather-data">
+            <h3>Weather data based on city</h3>
+            <!-- Weather data fetched from the API will be displayed here -->
+        </div>
+
+        <!-- Charts section -->
+        <div class="chart-section">
+            <!-- Bar Chart -->
+            <div class="chart-box">
+                <h4>Temperature (Next 5 Days)</h4>
+                <canvas id="barChart"></canvas>
+            </div>
+            <!-- Doughnut Chart -->
+            <div class="chart-box">
+                <h4>Weather Conditions (Next 5 Days)</h4>
+                <canvas id="doughnutChart"></canvas>
+            </div>
+            <!-- Line Chart -->
+            <div class="chart-box">
+                <h4>Temperature Variation (Next 5 Days)</h4>
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Linking the external JavaScript file -->
+    <script src="App.js"></script>
+</body>
+</html>
